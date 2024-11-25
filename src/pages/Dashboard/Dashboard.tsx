@@ -1,12 +1,13 @@
-import DashboardLayout from '../../components/layouts/DashboardLayout'
-import { Outlet } from 'react-router-dom'
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import DashboardLayout from '../../components/layouts/DashboardLayout';
 
-export default function Dashboard() {
+const Dashboard: React.FC = () => {
     return (
-        <>
-            <DashboardLayout>
-                <Outlet />
-            </DashboardLayout>
-        </>
-    )
-}
+        <DashboardLayout>
+            <Outlet />
+        </DashboardLayout>
+    );
+};
+
+export default Dashboard;

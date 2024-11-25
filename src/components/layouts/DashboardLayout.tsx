@@ -1,6 +1,7 @@
 import React from 'react';
-import { useThemeStore } from '../../store/use-theme-store';
 import Sidebar from '../sidebar/Sidebar';
+import DashboardHeader from '../dashboardHeader/DashboardHeader';
+import { useThemeStore } from '../../store/use-theme-store';
 
 type DashboardLayoutProps = {
     children: React.ReactNode;
@@ -14,9 +15,14 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
     }, [theme]);
 
     return (
-        <div className={theme}>
-            <Sidebar />
-            <main>{children}</main>
+        <div className="flex flex-col h-screen">
+            <DashboardHeader />
+            <div className="flex flex-grow overflow-hidden">
+                <Sidebar />
+                <main className="flex-grow overflow-auto">
+                    {children}
+                </main>
+            </div>
         </div>
     );
 };
