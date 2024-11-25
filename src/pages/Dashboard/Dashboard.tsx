@@ -1,7 +1,12 @@
-import React from 'react'
+import DashboardLayout from '../../components/layouts/DashboardLayout'
+import { Outlet } from 'react-router-dom'
 
 export default function Dashboard() {
     return (
-        <div className='bg-white dark:bg-gray-800'>Dashboard</div>
+        <>
+            <DashboardLayout>
+                <Outlet />
+            </DashboardLayout>
+        </>
     )
 }

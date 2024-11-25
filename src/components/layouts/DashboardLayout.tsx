@@ -1,13 +1,12 @@
 import React from 'react';
 import { useThemeStore } from '../../store/use-theme-store';
-import Header from '../header/Header';
-import Footer from '../footer/Footer';
+import Sidebar from '../sidebar/Sidebar';
 
-type MainLayoutProps = {
+type DashboardLayoutProps = {
     children: React.ReactNode;
 };
 
-const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
     const theme = useThemeStore((state) => state.theme);
 
     React.useEffect(() => {
@@ -16,11 +15,10 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
 
     return (
         <div className={theme}>
-            <Header />
+            <Sidebar />
             <main>{children}</main>
-            <Footer />
         </div>
     );
 };
 
-export default MainLayout;
+export default DashboardLayout;
