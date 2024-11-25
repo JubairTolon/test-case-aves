@@ -1,4 +1,3 @@
-import React from 'react'
 import { PiSpinnerGap } from 'react-icons/pi'
 
 export default function Loader() {
