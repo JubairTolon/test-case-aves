@@ -19,7 +19,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
             <DashboardHeader />
             <div className="flex flex-grow overflow-hidden">
                 <Sidebar />
-                <main className="flex-grow overflow-auto">
+                <main className="flex-grow overflow-auto bg-[#f1f1f1] dark:bg-gray-950 text-gray-800 dark:text-white min-h-[100dvh] p-6">
                     {children}
                 </main>
             </div>

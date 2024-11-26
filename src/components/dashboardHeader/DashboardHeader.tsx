@@ -5,7 +5,7 @@ import { FaBox } from 'react-icons/fa';
 const DashboardHeader: React.FC = () => {
   return (
     <header className="bg-white dark:bg-gray-800 text-gray-800 dark:text-white sticky top-0">
-      <div className="mx-auto flex justify-between items-center py-4 px-20">
+      <div className="mx-auto flex justify-between items-center py-4 px-4 lg:px-20">
         <div className="text-xl font-bold w-1/3">
           <div className="flex items-center gap-2">
             <FaBox size={18} />
