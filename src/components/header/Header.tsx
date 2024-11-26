@@ -1,6 +1,7 @@
 import React from 'react';
 import ThemeToggleButton from '../ui/buttons/theme-toggle'
 import { FaBox } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   return (
@@ -15,12 +16,12 @@ const Header: React.FC = () => {
 
         {/* Navigation links */}
         <nav className="hidden md:flex justify-center text-lg font-semibold space-x-6 w-1/3">
-          <a href="/" className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+          <Link to="/" className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
             Home
-          </a>
-          <a href="/dashboard" className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+          </Link>
+          <Link to="/dashboard" className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
             Dashboard
-          </a>
+          </Link>
         </nav>
 
         {/* Theme Toggle Button */}
